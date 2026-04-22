@@ -21,7 +21,7 @@ function toggleHeaderSidebarVisibility() {
     if (path !== '/' && path !== '' && path !== '/de/') {
         elementsToHide.forEach(element => {
             element.style.display = 'block';
-            sidebar.style.setProperty('width', '13rem', 'important');
+            sidebar.style.setProperty('width', '12rem', 'important');
         });
     } else {
         elementsToHide.forEach(element => {
