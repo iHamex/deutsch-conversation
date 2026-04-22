@@ -1,0 +1,941 @@
+site_name: Deutsch Conversation
+
+# Documentation directory
+docs_dir: docs
+
+# Repository
+repo_name: deutsch-docs
+
+# Theme Settings
+theme:
+  language: en
+  name: material
+  logo: media/logo.png
+  favicon: media/favicon.png
+  palette:
+    - scheme: slate
+      primary: 'blue grey'
+      accent: 'indigo'
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  features:
+    # navigation.instant and navigation.prefetch, 
+    # are not compatible with Search on language switch toggle
+    #- navigation.instant
+    #- navigation.instant.prefetch
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.mermaid
+
+
+# CSS Settings
+extra_css:
+  - media/custom.css
+
+
+# JS Settings
+extra_javascript:
+  - media/custom.js
+
+
+# Extra Settings
+extra:
+  generator: false
+
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true 
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - sane_lists
+
+# Plugins
+plugins:
+  - search
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - A1 - Beginner:
+    - Start Here: levels/A1/index.md
+    - "Part 1: Basic Communication":
+      - "Chapter 1: Greetings": levels/A1/001-greetings/index.md
+      - "Chapter 2: Introducing Yourself": levels/A1/002-introducing-yourself/index.md
+      - "Chapter 3: Numbers and Counting": levels/A1/003-numbers-counting/index.md
+      - "Chapter 4: Time and Dates": levels/A1/004-time-dates/index.md
+      - "Chapter 5: Colors and Objects": levels/A1/005-colors-objects/index.md
+      - "Chapter 6: Weather Talk": levels/A1/006-weather-talk/index.md
+      - "Chapter 7: Days and Weeks": levels/A1/007-days-weeks/index.md
+      - "Chapter 8: Months and Seasons": levels/A1/008-months-seasons/index.md
+      - "Chapter 9: Asking Questions": levels/A1/009-asking-questions/index.md
+      - "Chapter 10: Saying Yes and No": levels/A1/010-yes-no/index.md
+      - "Chapter 11: Talking About Family": levels/A1/011-family/index.md
+      - "Chapter 12: Describing People": levels/A1/012-describing-people/index.md
+      - "Chapter 13: Body Parts": levels/A1/013-body-parts/index.md
+      - "Chapter 14: Feelings and Emotions": levels/A1/014-feelings-emotions/index.md
+      - "Chapter 15: Likes and Dislikes": levels/A1/015-likes-dislikes/index.md
+      - "Chapter 16: Hobbies and Interests": levels/A1/016-hobbies-interests/index.md
+      - "Chapter 17: Daily Routines": levels/A1/017-daily-routines/index.md
+      - "Chapter 18: Morning Routine": levels/A1/018-morning-routine/index.md
+      - "Chapter 19: Evening Routine": levels/A1/019-evening-routine/index.md
+      - "Chapter 20: Weekend Activities": levels/A1/020-weekend-activities/index.md
+      - "Chapter 21: Making Plans": levels/A1/021-making-plans/index.md
+      - "Chapter 22: Invitations": levels/A1/022-invitations/index.md
+      - "Chapter 23: Accepting and Declining": levels/A1/023-accepting-declining/index.md
+      - "Chapter 24: Apologizing": levels/A1/024-apologizing/index.md
+      - "Chapter 25: Thanking Someone": levels/A1/025-thanking/index.md
+      - "Chapter 26: Asking for Help": levels/A1/026-asking-help/index.md
+      - "Chapter 27: Giving Directions": levels/A1/027-giving-directions/index.md
+      - "Chapter 28: Locations and Places": levels/A1/028-locations-places/index.md
+      - "Chapter 29: Describing Your Home": levels/A1/029-describing-home/index.md
+      - "Chapter 30: Rooms in the House": levels/A1/030-rooms-house/index.md
+      - "Chapter 31: Furniture": levels/A1/031-furniture/index.md
+      - "Chapter 32: In the Kitchen": levels/A1/032-in-kitchen/index.md
+      - "Chapter 33: In the Bathroom": levels/A1/033-in-bathroom/index.md
+      - "Chapter 34: In the Bedroom": levels/A1/034-in-bedroom/index.md
+      - "Chapter 35: In the Living Room": levels/A1/035-in-living-room/index.md
+      - "Chapter 36: Countries and Nationalities": levels/A1/036-countries-nationalities/index.md
+      - "Chapter 37: Languages": levels/A1/037-languages/index.md
+      - "Chapter 38: Cities and Towns": levels/A1/038-cities-towns/index.md
+      - "Chapter 39: Talking About Age": levels/A1/039-age/index.md
+      - "Chapter 40: Professions and Jobs": levels/A1/040-professions-jobs/index.md
+    - "Part 2: Shopping and Services":
+      - "Chapter 41: At the Bakery": levels/A1/041-at-bakery/index.md
+      - "Chapter 42: At the Supermarket": levels/A1/042-at-supermarket/index.md
+      - "Chapter 43: At the Market": levels/A1/043-at-market/index.md
+      - "Chapter 44: At the Butcher": levels/A1/044-at-butcher/index.md
+      - "Chapter 45: At the Fruit Stand": levels/A1/045-at-fruit-stand/index.md
+      - "Chapter 46: At the Pharmacy": levels/A1/046-at-pharmacy/index.md
+      - "Chapter 47: At the Clothing Store": levels/A1/047-at-clothing-store/index.md
+      - "Chapter 48: At the Shoe Store": levels/A1/048-at-shoe-store/index.md
+      - "Chapter 49: Sizes and Measurements": levels/A1/049-sizes-measurements/index.md
+      - "Chapter 50: Colors in Shopping": levels/A1/050-colors-shopping/index.md
+      - "Chapter 51: Asking About Prices": levels/A1/051-asking-prices/index.md
+      - "Chapter 52: Paying and Money": levels/A1/052-paying-money/index.md
+      - "Chapter 53: At the Post Office": levels/A1/053-at-post-office/index.md
+      - "Chapter 54: At the Bank": levels/A1/054-at-bank/index.md
+      - "Chapter 55: At the Hair Salon": levels/A1/055-at-hair-salon/index.md
+      - "Chapter 56: At the Bookstore": levels/A1/056-at-bookstore/index.md
+      - "Chapter 57: At the Flower Shop": levels/A1/057-at-flower-shop/index.md
+      - "Chapter 58: At the Kiosk": levels/A1/058-at-kiosk/index.md
+      - "Chapter 59: At the Electronics Store": levels/A1/059-at-electronics-store/index.md
+      - "Chapter 60: At the Toy Store": levels/A1/060-at-toy-store/index.md
+      - "Chapter 61: At the Pet Store": levels/A1/061-at-pet-store/index.md
+      - "Chapter 62: At the Bicycle Shop": levels/A1/062-at-bicycle-shop/index.md
+      - "Chapter 63: At the Department Store": levels/A1/063-at-department-store/index.md
+      - "Chapter 64: At the Gift Shop": levels/A1/064-at-gift-shop/index.md
+      - "Chapter 65: At the Jewelry Store": levels/A1/065-at-jewelry-store/index.md
+      - "Chapter 66: At the Watch Store": levels/A1/066-at-watch-store/index.md
+      - "Chapter 67: At the Stationery Store": levels/A1/067-at-stationery-store/index.md
+      - "Chapter 68: At the Music Store": levels/A1/068-at-music-store/index.md
+      - "Chapter 69: At the Sports Store": levels/A1/069-at-sports-store/index.md
+      - "Chapter 70: At the Camera Store": levels/A1/070-at-camera-store/index.md
+      - "Chapter 71: At the Optician": levels/A1/071-at-optician/index.md
+      - "Chapter 72: At the Cosmetics Store": levels/A1/072-at-cosmetics-store/index.md
+      - "Chapter 73: At the Perfume Store": levels/A1/073-at-perfume-store/index.md
+      - "Chapter 74: Returning Items": levels/A1/074-returning-items/index.md
+      - "Chapter 75: Exchanges and Refunds": levels/A1/075-exchanges-refunds/index.md
+      - "Chapter 76: Sales and Discounts": levels/A1/076-sales-discounts/index.md
+      - "Chapter 77: Shopping Lists": levels/A1/077-shopping-lists/index.md
+      - "Chapter 78: Comparing Products": levels/A1/078-comparing-products/index.md
+      - "Chapter 79: Asking for Recommendations": levels/A1/079-asking-recommendations/index.md
+      - "Chapter 80: Customer Service": levels/A1/080-customer-service/index.md
+    - "Part 3: Food and Dining":
+      - "Chapter 81: At the Café": levels/A1/081-at-cafe/index.md
+      - "Chapter 82: At the Restaurant": levels/A1/082-at-restaurant/index.md
+      - "Chapter 83: Making Reservations": levels/A1/083-making-reservations/index.md
+      - "Chapter 84: Ordering Food": levels/A1/084-ordering-food/index.md
+      - "Chapter 85: Ordering Drinks": levels/A1/085-ordering-drinks/index.md
+      - "Chapter 86: At the Coffee Shop": levels/A1/086-at-coffee-shop/index.md
+      - "Chapter 87: At the Ice Cream Shop": levels/A1/087-at-ice-cream-shop/index.md
+      - "Chapter 88: At the Fast Food Restaurant": levels/A1/088-at-fast-food/index.md
+      - "Chapter 89: Breakfast Foods": levels/A1/089-breakfast-foods/index.md
+      - "Chapter 90: Lunch Foods": levels/A1/090-lunch-foods/index.md
+      - "Chapter 91: Dinner Foods": levels/A1/091-dinner-foods/index.md
+      - "Chapter 92: Snacks": levels/A1/092-snacks/index.md
+      - "Chapter 93: Desserts": levels/A1/093-desserts/index.md
+      - "Chapter 94: Fruits": levels/A1/094-fruits/index.md
+      - "Chapter 95: Vegetables": levels/A1/095-vegetables/index.md
+      - "Chapter 96: Meat and Poultry": levels/A1/096-meat-poultry/index.md
+      - "Chapter 97: Fish and Seafood": levels/A1/097-fish-seafood/index.md
+      - "Chapter 98: Dairy Products": levels/A1/098-dairy-products/index.md
+      - "Chapter 99: Bread and Baked Goods": levels/A1/099-bread-baked-goods/index.md
+      - "Chapter 100: Beverages": levels/A1/100-beverages/index.md
+      - "Chapter 101: Coffee and Tea": levels/A1/101-coffee-tea/index.md
+      - "Chapter 102: Alcoholic Drinks": levels/A1/102-alcoholic-drinks/index.md
+      - "Chapter 103: Spices and Herbs": levels/A1/103-spices-herbs/index.md
+      - "Chapter 104: Condiments and Sauces": levels/A1/104-condiments-sauces/index.md
+      - "Chapter 105: Grains and Pasta": levels/A1/105-grains-pasta/index.md
+      - "Chapter 106: Nuts and Seeds": levels/A1/106-nuts-seeds/index.md
+      - "Chapter 107: Oils and Fats": levels/A1/107-oils-fats/index.md
+      - "Chapter 108: Legumes": levels/A1/108-legumes/index.md
+      - "Chapter 109: Cereals": levels/A1/109-cereals/index.md
+      - "Chapter 110: Frozen Foods": levels/A1/110-frozen-foods/index.md
+      - "Chapter 111: Canned Foods": levels/A1/111-canned-foods/index.md
+      - "Chapter 112: Organic Foods": levels/A1/112-organic-foods/index.md
+      - "Chapter 113: Local Foods": levels/A1/113-local-foods/index.md
+      - "Chapter 114: International Cuisine": levels/A1/114-international-cuisine/index.md
+      - "Chapter 115: German Specialties": levels/A1/115-german-specialties/index.md
+      - "Chapter 116: Dietary Restrictions": levels/A1/116-dietary-restrictions/index.md
+      - "Chapter 117: Vegetarian Options": levels/A1/117-vegetarian-options/index.md
+      - "Chapter 118: Vegan Options": levels/A1/118-vegan-options/index.md
+      - "Chapter 119: Allergies": levels/A1/119-allergies/index.md
+      - "Chapter 120: Taste and Flavor": levels/A1/120-taste-flavor/index.md
+    - "Part 4: Travel and Transportation":
+      - "Chapter 121: At the Train Station": levels/A1/121-at-train-station/index.md
+      - "Chapter 122: At the Bus Stop": levels/A1/122-at-bus-stop/index.md
+      - "Chapter 123: At the Taxi Stand": levels/A1/123-at-taxi-stand/index.md
+      - "Chapter 124: At the Airport": levels/A1/124-at-airport/index.md
+      - "Chapter 125: Buying Tickets": levels/A1/125-buying-tickets/index.md
+      - "Chapter 126: At the Ticket Machine": levels/A1/126-at-ticket-machine/index.md
+      - "Chapter 127: Public Transport": levels/A1/127-public-transport/index.md
+      - "Chapter 128: Taking the Subway": levels/A1/128-taking-subway/index.md
+      - "Chapter 129: Taking the Tram": levels/A1/129-taking-tram/index.md
+      - "Chapter 130: Taking the Bus": levels/A1/130-taking-bus/index.md
+      - "Chapter 131: Taking the Train": levels/A1/131-taking-train/index.md
+      - "Chapter 132: At the Gas Station": levels/A1/132-at-gas-station/index.md
+      - "Chapter 133: Renting a Car": levels/A1/133-renting-car/index.md
+      - "Chapter 134: At the Parking Lot": levels/A1/134-at-parking-lot/index.md
+      - "Chapter 135: Asking for Directions": levels/A1/135-asking-directions/index.md
+      - "Chapter 136: Following Directions": levels/A1/136-following-directions/index.md
+      - "Chapter 137: Using a Map": levels/A1/137-using-map/index.md
+      - "Chapter 138: At the Hotel Reception": levels/A1/138-at-hotel-reception/index.md
+      - "Chapter 139: Checking In": levels/A1/139-checking-in/index.md
+      - "Chapter 140: Checking Out": levels/A1/140-checking-out/index.md
+      - "Chapter 141: Hotel Services": levels/A1/141-hotel-services/index.md
+      - "Chapter 142: Hotel Problems": levels/A1/142-hotel-problems/index.md
+      - "Chapter 143: At the Tourist Information": levels/A1/143-at-tourist-information/index.md
+      - "Chapter 144: Sightseeing": levels/A1/144-sightseeing/index.md
+      - "Chapter 145: At the Museum": levels/A1/145-at-museum/index.md
+      - "Chapter 146: At the Zoo": levels/A1/146-at-zoo/index.md
+      - "Chapter 147: At the Park": levels/A1/147-at-park/index.md
+      - "Chapter 148: At the Beach": levels/A1/148-at-beach/index.md
+      - "Chapter 149: At the Swimming Pool": levels/A1/149-at-swimming-pool/index.md
+      - "Chapter 150: At the Playground": levels/A1/150-at-playground/index.md
+      - "Chapter 151: Travel Plans": levels/A1/151-travel-plans/index.md
+      - "Chapter 152: Packing": levels/A1/152-packing/index.md
+      - "Chapter 153: At Customs": levels/A1/153-at-customs/index.md
+      - "Chapter 154: Lost Luggage": levels/A1/154-lost-luggage/index.md
+      - "Chapter 155: Travel Documents": levels/A1/155-travel-documents/index.md
+      - "Chapter 156: Emergency Situations": levels/A1/156-emergency-situations/index.md
+      - "Chapter 157: Asking for Emergency Help": levels/A1/157-asking-emergency-help/index.md
+      - "Chapter 158: At the Police Station": levels/A1/158-at-police-station/index.md
+      - "Chapter 159: Lost and Found": levels/A1/159-lost-found/index.md
+      - "Chapter 160: Travel Insurance": levels/A1/160-travel-insurance/index.md
+    - "Part 5: Health, Work and Daily Life":
+      - "Chapter 161: At the Doctor's Office": levels/A1/161-at-doctors-office/index.md
+      - "Chapter 162: Symptoms and Illness": levels/A1/162-symptoms-illness/index.md
+      - "Chapter 163: At the Dentist": levels/A1/163-at-dentist/index.md
+      - "Chapter 164: Making Appointments": levels/A1/164-making-appointments/index.md
+      - "Chapter 165: At the Hospital": levels/A1/165-at-hospital/index.md
+      - "Chapter 166: Medicine and Prescriptions": levels/A1/166-medicine-prescriptions/index.md
+      - "Chapter 167: Health Insurance": levels/A1/167-health-insurance/index.md
+      - "Chapter 168: Exercise and Fitness": levels/A1/168-exercise-fitness/index.md
+      - "Chapter 169: At the Gym": levels/A1/169-at-gym/index.md
+      - "Chapter 170: Sports and Activities": levels/A1/170-sports-activities/index.md
+      - "Chapter 171: At the Office": levels/A1/171-at-office/index.md
+      - "Chapter 172: Office Supplies": levels/A1/172-office-supplies/index.md
+      - "Chapter 173: Making Phone Calls": levels/A1/173-making-phone-calls/index.md
+      - "Chapter 174: Sending Emails": levels/A1/174-sending-emails/index.md
+      - "Chapter 175: Meetings": levels/A1/175-meetings/index.md
+      - "Chapter 176: In the Classroom": levels/A1/176-in-classroom/index.md
+      - "Chapter 177: School Subjects": levels/A1/177-school-subjects/index.md
+      - "Chapter 178: At the Library": levels/A1/178-at-library/index.md
+      - "Chapter 179: Studying": levels/A1/179-studying/index.md
+      - "Chapter 180: Exams and Tests": levels/A1/180-exams-tests/index.md
+      - "Chapter 181: Renting an Apartment": levels/A1/181-renting-apartment/index.md
+      - "Chapter 182: Moving In": levels/A1/182-moving-in/index.md
+      - "Chapter 183: Utilities": levels/A1/183-utilities/index.md
+      - "Chapter 184: Household Chores": levels/A1/184-household-chores/index.md
+      - "Chapter 185: At the Laundromat": levels/A1/185-at-laundromat/index.md
+      - "Chapter 186: Cleaning": levels/A1/186-cleaning/index.md
+      - "Chapter 187: Repairs and Maintenance": levels/A1/187-repairs-maintenance/index.md
+      - "Chapter 188: Neighbors": levels/A1/188-neighbors/index.md
+      - "Chapter 189: At the Cinema": levels/A1/189-at-cinema/index.md
+      - "Chapter 190: At the Theater": levels/A1/190-at-theater/index.md
+      - "Chapter 191: At a Concert": levels/A1/191-at-concert/index.md
+      - "Chapter 192: Watching TV": levels/A1/192-watching-tv/index.md
+      - "Chapter 193: Using the Internet": levels/A1/193-using-internet/index.md
+      - "Chapter 194: Social Media": levels/A1/194-social-media/index.md
+      - "Chapter 195: Talking About Pets": levels/A1/195-talking-about-pets/index.md
+      - "Chapter 196: Birthdays and Celebrations": levels/A1/196-birthdays-celebrations/index.md
+      - "Chapter 197: Holidays and Traditions": levels/A1/197-holidays-traditions/index.md
+      - "Chapter 198: Making Friends": levels/A1/198-making-friends/index.md
+      - "Chapter 199: Social Gatherings": levels/A1/199-social-gatherings/index.md
+      - "Chapter 200: German Culture": levels/A1/200-german-culture/index.md
+  - A2 - Elementary:
+    - Start Here: levels/A2/index.md
+    - "Part 1: Expanded Daily Life":
+      - "Chapter 001: Complex Greetings": levels/A2/001-complex-greetings/index.md
+      - "Chapter 002: Detailed Introductions": levels/A2/002-detailed-introductions/index.md
+      - "Chapter 003: Personal Background": levels/A2/003-personal-background/index.md
+      - "Chapter 004: Education History": levels/A2/004-education-history/index.md
+      - "Chapter 005: Work Experience": levels/A2/005-work-experience/index.md
+      - "Chapter 006: Career Goals": levels/A2/006-career-goals/index.md
+      - "Chapter 007: Extended Family": levels/A2/007-extended-family/index.md
+      - "Chapter 008: Family Relationships": levels/A2/008-family-relationships/index.md
+      - "Chapter 009: Childhood Memories": levels/A2/009-childhood-memories/index.md
+      - "Chapter 010: Life Events": levels/A2/010-life-events/index.md
+      - "Chapter 011: Describing Personality": levels/A2/011-describing-personality/index.md
+      - "Chapter 012: Character Traits": levels/A2/012-character-traits/index.md
+      - "Chapter 013: Strengths and Weaknesses": levels/A2/013-strengths-weaknesses/index.md
+      - "Chapter 014: Personal Values": levels/A2/014-personal-values/index.md
+      - "Chapter 015: Beliefs and Opinions": levels/A2/015-beliefs-opinions/index.md
+      - "Chapter 016: Future Plans": levels/A2/016-future-plans/index.md
+      - "Chapter 017: Dreams and Aspirations": levels/A2/017-dreams-aspirations/index.md
+      - "Chapter 018: Past Experiences": levels/A2/018-past-experiences/index.md
+      - "Chapter 019: Memorable Moments": levels/A2/019-memorable-moments/index.md
+      - "Chapter 020: Life Changes": levels/A2/020-life-changes/index.md
+      - "Chapter 021: Daily Schedule": levels/A2/021-daily-schedule/index.md
+      - "Chapter 022: Time Management": levels/A2/022-time-management/index.md
+      - "Chapter 023: Work-Life Balance": levels/A2/023-work-life-balance/index.md
+      - "Chapter 024: Stress and Relaxation": levels/A2/024-stress-relaxation/index.md
+      - "Chapter 025: Sleep Habits": levels/A2/025-sleep-habits/index.md
+      - "Chapter 026: Morning Habits": levels/A2/026-morning-habits/index.md
+      - "Chapter 027: Evening Habits": levels/A2/027-evening-habits/index.md
+      - "Chapter 028: Productivity Tips": levels/A2/028-productivity-tips/index.md
+      - "Chapter 029: Goal Setting": levels/A2/029-goal-setting/index.md
+      - "Chapter 030: Achievement": levels/A2/030-achievement/index.md
+      - "Chapter 031: Challenges": levels/A2/031-challenges/index.md
+      - "Chapter 032: Problem Solving": levels/A2/032-problem-solving/index.md
+      - "Chapter 033: Decision Making": levels/A2/033-decision-making/index.md
+      - "Chapter 034: Advice Giving": levels/A2/034-advice-giving/index.md
+      - "Chapter 035: Asking for Advice": levels/A2/035-asking-for-advice/index.md
+      - "Chapter 036: Suggestions": levels/A2/036-suggestions/index.md
+      - "Chapter 037: Recommendations": levels/A2/037-recommendations/index.md
+      - "Chapter 038: Warnings": levels/A2/038-warnings/index.md
+      - "Chapter 039: Complaints": levels/A2/039-complaints/index.md
+      - "Chapter 040: Compliments": levels/A2/040-compliments/index.md
+    - "Part 2: Work and Professional Life":
+      - "Chapter 041: Job Interviews": levels/A2/041-job-interviews/index.md
+      - "Chapter 042: Resume Discussion": levels/A2/042-resume-discussion/index.md
+      - "Chapter 043: Qualifications": levels/A2/043-qualifications/index.md
+      - "Chapter 044: Skills and Abilities": levels/A2/044-skills-abilities/index.md
+      - "Chapter 045: Work Environment": levels/A2/045-work-environment/index.md
+      - "Chapter 046: Colleagues": levels/A2/046-colleagues/index.md
+      - "Chapter 047: Boss and Supervisor": levels/A2/047-boss-supervisor/index.md
+      - "Chapter 048: Team Work": levels/A2/048-team-work/index.md
+      - "Chapter 049: Projects": levels/A2/049-projects/index.md
+      - "Chapter 050: Deadlines": levels/A2/050-deadlines/index.md
+      - "Chapter 051: Presentations": levels/A2/051-presentations/index.md
+      - "Chapter 052: Meetings": levels/A2/052-meetings/index.md
+      - "Chapter 053: Conference Calls": levels/A2/053-conference-calls/index.md
+      - "Chapter 054: Business Emails": levels/A2/054-business-emails/index.md
+      - "Chapter 055: Professional Phone Calls": levels/A2/055-professional-phone-calls/index.md
+      - "Chapter 056: Networking": levels/A2/056-networking/index.md
+      - "Chapter 057: Business Cards": levels/A2/057-business-cards/index.md
+      - "Chapter 058: Small Talk at Work": levels/A2/058-small-talk-work/index.md
+      - "Chapter 059: Break Room": levels/A2/059-break-room/index.md
+      - "Chapter 060: Lunch Meetings": levels/A2/060-lunch-meetings/index.md
+      - "Chapter 061: Performance Review": levels/A2/061-performance-review/index.md
+      - "Chapter 062: Salary Negotiation": levels/A2/062-salary-negotiation/index.md
+      - "Chapter 063: Promotion": levels/A2/063-promotion/index.md
+      - "Chapter 064: Job Change": levels/A2/064-job-change/index.md
+      - "Chapter 065: Resignation": levels/A2/065-resignation/index.md
+      - "Chapter 066: Retirement": levels/A2/066-retirement/index.md
+      - "Chapter 067: Unemployment": levels/A2/067-unemployment/index.md
+      - "Chapter 068: Job Search": levels/A2/068-job-search/index.md
+      - "Chapter 069: Career Counseling": levels/A2/069-career-counseling/index.md
+      - "Chapter 070: Professional Development": levels/A2/070-professional-development/index.md
+      - "Chapter 071: Training Programs": levels/A2/071-training-programs/index.md
+      - "Chapter 072: Certifications": levels/A2/072-certifications/index.md
+      - "Chapter 073: Conferences": levels/A2/073-conferences/index.md
+      - "Chapter 074: Workshops": levels/A2/074-workshops/index.md
+      - "Chapter 075: Seminars": levels/A2/075-seminars/index.md
+      - "Chapter 076: Industry Trends": levels/A2/076-industry-trends/index.md
+      - "Chapter 077: Competition": levels/A2/077-competition/index.md
+      - "Chapter 078: Market Analysis": levels/A2/078-market-analysis/index.md
+      - "Chapter 079: Business Strategy": levels/A2/079-business-strategy/index.md
+      - "Chapter 080: Company Culture": levels/A2/080-company-culture/index.md
+    - "Part 3: Housing and Living":
+      - "Chapter 081: Apartment Hunting": levels/A2/081-apartment-hunting/index.md
+      - "Chapter 082: House Viewing": levels/A2/082-house-viewing/index.md
+      - "Chapter 083: Rental Agreement": levels/A2/083-rental-agreement/index.md
+      - "Chapter 084: Landlord Communication": levels/A2/084-landlord-communication/index.md
+      - "Chapter 085: Roommate Issues": levels/A2/085-roommate-issues/index.md
+      - "Chapter 086: Shared Flat Rules": levels/A2/086-shared-flat-rules/index.md
+      - "Chapter 087: Noise Complaints": levels/A2/087-noise-complaints/index.md
+      - "Chapter 088: Maintenance Requests": levels/A2/088-maintenance-requests/index.md
+      - "Chapter 089: Plumbing Problems": levels/A2/089-plumbing-problems/index.md
+      - "Chapter 090: Electrical Issues": levels/A2/090-electrical-issues/index.md
+      - "Chapter 091: Heating and Cooling": levels/A2/091-heating-cooling/index.md
+      - "Chapter 092: Internet Setup": levels/A2/092-internet-setup/index.md
+      - "Chapter 093: Utility Bills": levels/A2/093-utility-bills/index.md
+      - "Chapter 094: Electricity Bills": levels/A2/094-electricity-bills/index.md
+      - "Chapter 095: Water Bills": levels/A2/095-water-bills/index.md
+      - "Chapter 096: Heating Bills": levels/A2/096-heating-bills/index.md
+      - "Chapter 097: Insurance": levels/A2/097-insurance/index.md
+      - "Chapter 098: Home Insurance": levels/A2/098-home-insurance/index.md
+      - "Chapter 099: Liability Insurance": levels/A2/099-liability-insurance/index.md
+      - "Chapter 100: Moving Out": levels/A2/100-moving-out/index.md
+      - "Chapter 101: Moving Company": levels/A2/101-moving-company/index.md
+      - "Chapter 102: Packing Tips": levels/A2/102-packing-tips/index.md
+      - "Chapter 103: Change of Address": levels/A2/103-change-of-address/index.md
+      - "Chapter 104: Registration Office": levels/A2/104-registration-office/index.md
+      - "Chapter 105: Anmeldung": levels/A2/105-anmeldung/index.md
+      - "Chapter 106: Abmeldung": levels/A2/106-abmeldung/index.md
+      - "Chapter 107: Residence Permit": levels/A2/107-residence-permit/index.md
+      - "Chapter 108: Visa Extension": levels/A2/108-visa-extension/index.md
+      - "Chapter 109: Work Permit": levels/A2/109-work-permit/index.md
+      - "Chapter 110: Blue Card": levels/A2/110-blue-card/index.md
+      - "Chapter 111: Citizenship": levels/A2/111-citizenship/index.md
+      - "Chapter 112: Integration Course": levels/A2/112-integration-course/index.md
+      - "Chapter 113: Language Test": levels/A2/113-language-test/index.md
+      - "Chapter 114: Citizenship Test": levels/A2/114-citizenship-test/index.md
+      - "Chapter 115: Bureaucracy": levels/A2/115-bureaucracy/index.md
+      - "Chapter 116: Forms and Documents": levels/A2/116-forms-documents/index.md
+      - "Chapter 117: Official Letters": levels/A2/117-official-letters/index.md
+      - "Chapter 118: Appointments": levels/A2/118-appointments/index.md
+      - "Chapter 119: Waiting Times": levels/A2/119-waiting-times/index.md
+      - "Chapter 120: German Efficiency": levels/A2/120-german-efficiency/index.md
+    - "Part 4: Social Life and Relationships":
+      - "Chapter 121: Making New Friends": levels/A2/121-making-new-friends/index.md
+      - "Chapter 122: Friendship": levels/A2/122-friendship/index.md
+      - "Chapter 123: Close Friends": levels/A2/123-close-friends/index.md
+      - "Chapter 124: Best Friends": levels/A2/124-best-friends/index.md
+      - "Chapter 125: Acquaintances": levels/A2/125-acquaintances/index.md
+      - "Chapter 126: Social Events": levels/A2/126-social-events/index.md
+      - "Chapter 127: Parties": levels/A2/127-parties/index.md
+      - "Chapter 128: Celebrations": levels/A2/128-celebrations/index.md
+      - "Chapter 129: Weddings": levels/A2/129-weddings/index.md
+      - "Chapter 130: Anniversaries": levels/A2/130-anniversaries/index.md
+      - "Chapter 131: Dating": levels/A2/131-dating/index.md
+      - "Chapter 132: First Date": levels/A2/132-first-date/index.md
+      - "Chapter 133: Relationships": levels/A2/133-relationships/index.md
+      - "Chapter 134: Romantic Gestures": levels/A2/134-romantic-gestures/index.md
+      - "Chapter 135: Arguments": levels/A2/135-arguments/index.md
+      - "Chapter 136: Making Up": levels/A2/136-making-up/index.md
+      - "Chapter 137: Breakups": levels/A2/137-breakups/index.md
+      - "Chapter 138: Moving On": levels/A2/138-moving-on/index.md
+      - "Chapter 139: Marriage": levels/A2/139-marriage/index.md
+      - "Chapter 140: Engagement": levels/A2/140-engagement/index.md
+      - "Chapter 141: Children": levels/A2/141-children/index.md
+      - "Chapter 142: Parenting": levels/A2/142-parenting/index.md
+      - "Chapter 143: Childcare": levels/A2/143-childcare/index.md
+      - "Chapter 144: Kindergarten": levels/A2/144-kindergarten/index.md
+      - "Chapter 145: School System": levels/A2/145-school-system/index.md
+      - "Chapter 146: Parent-Teacher Meeting": levels/A2/146-parent-teacher-meeting/index.md
+      - "Chapter 147: Homework Help": levels/A2/147-homework-help/index.md
+      - "Chapter 148: Extracurricular Activities": levels/A2/148-extracurricular-activities/index.md
+      - "Chapter 149: Sports Teams": levels/A2/149-sports-teams/index.md
+      - "Chapter 150: Music Lessons": levels/A2/150-music-lessons/index.md
+      - "Chapter 151: Art Classes": levels/A2/151-art-classes/index.md
+      - "Chapter 152: Dance Classes": levels/A2/152-dance-classes/index.md
+      - "Chapter 153: Language Classes": levels/A2/153-language-classes/index.md
+      - "Chapter 154: Cooking Classes": levels/A2/154-cooking-classes/index.md
+      - "Chapter 155: Volunteering": levels/A2/155-volunteering/index.md
+      - "Chapter 156: Community Service": levels/A2/156-community-service/index.md
+      - "Chapter 157: Charity Work": levels/A2/157-charity-work/index.md
+      - "Chapter 158: Donations": levels/A2/158-donations/index.md
+      - "Chapter 159: Fundraising": levels/A2/159-fundraising/index.md
+      - "Chapter 160: Social Causes": levels/A2/160-social-causes/index.md
+    - "Part 5: Health and Wellness":
+      - "Chapter 161: Health Concerns": levels/A2/161-health-concerns/index.md
+      - "Chapter 162: Medical History": levels/A2/162-medical-history/index.md
+      - "Chapter 163: Chronic Conditions": levels/A2/163-chronic-conditions/index.md
+      - "Chapter 164: Medications": levels/A2/164-medications/index.md
+      - "Chapter 165: Side Effects": levels/A2/165-side-effects/index.md
+      - "Chapter 166: Specialist Appointments": levels/A2/166-specialist-appointments/index.md
+      - "Chapter 167: Medical Tests": levels/A2/167-medical-tests/index.md
+      - "Chapter 168: Lab Results": levels/A2/168-lab-results/index.md
+      - "Chapter 169: X-Rays": levels/A2/169-xrays/index.md
+      - "Chapter 170: MRI Scans": levels/A2/170-mri-scans/index.md
+      - "Chapter 171: Surgery": levels/A2/171-surgery/index.md
+      - "Chapter 172: Recovery": levels/A2/172-recovery/index.md
+      - "Chapter 173: Physical Therapy": levels/A2/173-physical-therapy/index.md
+      - "Chapter 174: Rehabilitation": levels/A2/174-rehabilitation/index.md
+      - "Chapter 175: Mental Health": levels/A2/175-mental-health/index.md
+      - "Chapter 176: Therapy Sessions": levels/A2/176-therapy-sessions/index.md
+      - "Chapter 177: Stress Management": levels/A2/177-stress-management/index.md
+      - "Chapter 178: Anxiety": levels/A2/178-anxiety/index.md
+      - "Chapter 179: Depression": levels/A2/179-depression/index.md
+      - "Chapter 180: Self-Care": levels/A2/180-self-care/index.md
+      - "Chapter 181: Wellness": levels/A2/181-wellness/index.md
+      - "Chapter 182: Healthy Lifestyle": levels/A2/182-healthy-lifestyle/index.md
+      - "Chapter 183: Nutrition": levels/A2/183-nutrition/index.md
+      - "Chapter 184: Diet Plans": levels/A2/184-diet-plans/index.md
+      - "Chapter 185: Weight Loss": levels/A2/185-weight-loss/index.md
+      - "Chapter 186: Weight Gain": levels/A2/186-weight-gain/index.md
+      - "Chapter 187: Fitness Goals": levels/A2/187-fitness-goals/index.md
+      - "Chapter 188: Workout Routines": levels/A2/188-workout-routines/index.md
+      - "Chapter 189: Personal Trainer": levels/A2/189-personal-trainer/index.md
+      - "Chapter 190: Yoga": levels/A2/190-yoga/index.md
+      - "Chapter 191: Meditation": levels/A2/191-meditation/index.md
+      - "Chapter 192: Mindfulness": levels/A2/192-mindfulness/index.md
+      - "Chapter 193: Sleep Quality": levels/A2/193-sleep-quality/index.md
+      - "Chapter 194: Insomnia": levels/A2/194-insomnia/index.md
+      - "Chapter 195: Energy Levels": levels/A2/195-energy-levels/index.md
+      - "Chapter 196: Vitamins and Supplements": levels/A2/196-vitamins-supplements/index.md
+      - "Chapter 197: Alternative Medicine": levels/A2/197-alternative-medicine/index.md
+      - "Chapter 198: Homeopathy": levels/A2/198-homeopathy/index.md
+      - "Chapter 199: Acupuncture": levels/A2/199-acupuncture/index.md
+      - "Chapter 200: Preventive Care": levels/A2/200-preventive-care/index.md
+  - B1 - Intermediate:
+    - Start Here: levels/B1/index.md
+    - "Part 1: Complex Social Interactions":
+      - "Chapter 001: Formal Business Meetings": levels/B1/001-formal-business-meetings/index.md
+      - "Chapter 002: Negotiations": levels/B1/002-negotiations/index.md
+      - "Chapter 003: Contracts": levels/B1/003-contracts/index.md
+      - "Chapter 004: Legal Discussions": levels/B1/004-legal-discussions/index.md
+      - "Chapter 005: Dispute Resolution": levels/B1/005-dispute-resolution/index.md
+      - "Chapter 006: Mediation": levels/B1/006-mediation/index.md
+      - "Chapter 007: Arbitration": levels/B1/007-arbitration/index.md
+      - "Chapter 008: Court Proceedings": levels/B1/008-court-proceedings/index.md
+      - "Chapter 009: Legal Rights": levels/B1/009-legal-rights/index.md
+      - "Chapter 010: Consumer Protection": levels/B1/010-consumer-protection/index.md
+      - "Chapter 011: Tenant Rights": levels/B1/011-tenant-rights/index.md
+      - "Chapter 012: Employee Rights": levels/B1/012-employee-rights/index.md
+      - "Chapter 013: Labor Law": levels/B1/013-labor-law/index.md
+      - "Chapter 014: Workplace Discrimination": levels/B1/014-workplace-discrimination/index.md
+      - "Chapter 015: Sexual Harassment": levels/B1/015-sexual-harassment/index.md
+      - "Chapter 016: Whistleblowing": levels/B1/016-whistleblowing/index.md
+      - "Chapter 017: Corporate Ethics": levels/B1/017-corporate-ethics/index.md
+      - "Chapter 018: Business Compliance": levels/B1/018-business-compliance/index.md
+      - "Chapter 019: Regulations": levels/B1/019-regulations/index.md
+      - "Chapter 020: Audits": levels/B1/020-audits/index.md
+      - "Chapter 021: Financial Planning": levels/B1/021-financial-planning/index.md
+      - "Chapter 022: Investment Strategies": levels/B1/022-investment-strategies/index.md
+      - "Chapter 023: Stock Market": levels/B1/023-stock-market/index.md
+      - "Chapter 024: Real Estate Investment": levels/B1/024-real-estate-investment/index.md
+      - "Chapter 025: Retirement Planning": levels/B1/025-retirement-planning/index.md
+      - "Chapter 026: Pension Systems": levels/B1/026-pension-systems/index.md
+      - "Chapter 027: Tax Planning": levels/B1/027-tax-planning/index.md
+      - "Chapter 028: Tax Returns": levels/B1/028-tax-returns/index.md
+      - "Chapter 029: Tax Deductions": levels/B1/029-tax-deductions/index.md
+      - "Chapter 030: Tax Audits": levels/B1/030-tax-audits/index.md
+      - "Chapter 031: Banking Services": levels/B1/031-banking-services/index.md
+      - "Chapter 032: Loans": levels/B1/032-loans/index.md
+      - "Chapter 033: Mortgages": levels/B1/033-mortgages/index.md
+      - "Chapter 034: Credit Cards": levels/B1/034-credit-cards/index.md
+      - "Chapter 035: Debt Management": levels/B1/035-debt-management/index.md
+      - "Chapter 036: Bankruptcy": levels/B1/036-bankruptcy/index.md
+      - "Chapter 037: Financial Crisis": levels/B1/037-financial-crisis/index.md
+      - "Chapter 038: Economic Downturn": levels/B1/038-economic-downturn/index.md
+      - "Chapter 039: Recession": levels/B1/039-recession/index.md
+      - "Chapter 040: Inflation": levels/B1/040-inflation/index.md
+    - "Part 2: Professional Development":
+      - "Chapter 041: Leadership Skills": levels/B1/041-leadership-skills/index.md
+      - "Chapter 042: Management Styles": levels/B1/042-management-styles/index.md
+      - "Chapter 043: Team Building": levels/B1/043-team-building/index.md
+      - "Chapter 044: Motivation": levels/B1/044-motivation/index.md
+      - "Chapter 045: Employee Engagement": levels/B1/045-employee-engagement/index.md
+      - "Chapter 046: Performance Management": levels/B1/046-performance-management/index.md
+      - "Chapter 047: Feedback Culture": levels/B1/047-feedback-culture/index.md
+      - "Chapter 048: Constructive Criticism": levels/B1/048-constructive-criticism/index.md
+      - "Chapter 049: Conflict Management": levels/B1/049-conflict-management/index.md
+      - "Chapter 050: Workplace Conflicts": levels/B1/050-workplace-conflicts/index.md
+      - "Chapter 051: Difficult Conversations": levels/B1/051-difficult-conversations/index.md
+      - "Chapter 052: Termination": levels/B1/052-termination/index.md
+      - "Chapter 053: Layoffs": levels/B1/053-layoffs/index.md
+      - "Chapter 054: Restructuring": levels/B1/054-restructuring/index.md
+      - "Chapter 055: Mergers and Acquisitions": levels/B1/055-mergers-acquisitions/index.md
+      - "Chapter 056: Corporate Strategy": levels/B1/056-corporate-strategy/index.md
+      - "Chapter 057: Business Development": levels/B1/057-business-development/index.md
+      - "Chapter 058: Market Expansion": levels/B1/058-market-expansion/index.md
+      - "Chapter 059: Product Launch": levels/B1/059-product-launch/index.md
+      - "Chapter 060: Marketing Campaigns": levels/B1/060-marketing-campaigns/index.md
+      - "Chapter 061: Brand Management": levels/B1/061-brand-management/index.md
+      - "Chapter 062: Public Relations": levels/B1/062-public-relations/index.md
+      - "Chapter 063: Crisis Communication": levels/B1/063-crisis-communication/index.md
+      - "Chapter 064: Media Relations": levels/B1/064-media-relations/index.md
+      - "Chapter 065: Press Releases": levels/B1/065-press-releases/index.md
+      - "Chapter 066: Interviews": levels/B1/066-interviews/index.md
+      - "Chapter 067: Public Speaking": levels/B1/067-public-speaking/index.md
+      - "Chapter 068: Presentations": levels/B1/068-presentations/index.md
+      - "Chapter 069: Pitching Ideas": levels/B1/069-pitching-ideas/index.md
+      - "Chapter 070: Persuasion": levels/B1/070-persuasion/index.md
+      - "Chapter 071: Sales Techniques": levels/B1/071-sales-techniques/index.md
+      - "Chapter 072: Customer Relations": levels/B1/072-customer-relations/index.md
+      - "Chapter 073: Client Management": levels/B1/073-client-management/index.md
+      - "Chapter 074: Account Management": levels/B1/074-account-management/index.md
+      - "Chapter 075: Business Partnerships": levels/B1/075-business-partnerships/index.md
+      - "Chapter 076: Vendor Relations": levels/B1/076-vendor-relations/index.md
+      - "Chapter 077: Supply Chain": levels/B1/077-supply-chain/index.md
+      - "Chapter 078: Logistics": levels/B1/078-logistics/index.md
+      - "Chapter 079: Quality Control": levels/B1/079-quality-control/index.md
+      - "Chapter 080: Process Improvement": levels/B1/080-process-improvement/index.md
+    - "Part 3: Education and Academia":
+      - "Chapter 081: University Life": levels/B1/081-university-life/index.md
+      - "Chapter 082: Choosing a Major": levels/B1/082-choosing-major/index.md
+      - "Chapter 083: Course Selection": levels/B1/083-course-selection/index.md
+      - "Chapter 084: Academic Advising": levels/B1/084-academic-advising/index.md
+      - "Chapter 085: Study Abroad": levels/B1/085-study-abroad/index.md
+      - "Chapter 086: Exchange Programs": levels/B1/086-exchange-programs/index.md
+      - "Chapter 087: Scholarships": levels/B1/087-scholarships/index.md
+      - "Chapter 088: Student Loans": levels/B1/088-student-loans/index.md
+      - "Chapter 089: Financial Aid": levels/B1/089-financial-aid/index.md
+      - "Chapter 090: Part-Time Jobs": levels/B1/090-part-time-jobs/index.md
+      - "Chapter 091: Internships": levels/B1/091-internships/index.md
+      - "Chapter 092: Career Services": levels/B1/092-career-services/index.md
+      - "Chapter 093: Job Fairs": levels/B1/093-job-fairs/index.md
+      - "Chapter 094: Graduate School": levels/B1/094-graduate-school/index.md
+      - "Chapter 095: Master's Programs": levels/B1/095-masters-programs/index.md
+      - "Chapter 096: PhD Programs": levels/B1/096-phd-programs/index.md
+      - "Chapter 097: Research": levels/B1/097-research/index.md
+      - "Chapter 098: Thesis Writing": levels/B1/098-thesis-writing/index.md
+      - "Chapter 099: Dissertation": levels/B1/099-dissertation/index.md
+      - "Chapter 100: Academic Publishing": levels/B1/100-academic-publishing/index.md
+      - "Chapter 101: Peer Review": levels/B1/101-peer-review/index.md
+      - "Chapter 102: Conferences": levels/B1/102-conferences/index.md
+      - "Chapter 103: Academic Networking": levels/B1/103-academic-networking/index.md
+      - "Chapter 104: Collaboration": levels/B1/104-collaboration/index.md
+      - "Chapter 105: Interdisciplinary Work": levels/B1/105-interdisciplinary-work/index.md
+      - "Chapter 106: Teaching": levels/B1/106-teaching/index.md
+      - "Chapter 107: Lecturing": levels/B1/107-lecturing/index.md
+      - "Chapter 108: Grading": levels/B1/108-grading/index.md
+      - "Chapter 109: Student Evaluation": levels/B1/109-student-evaluation/index.md
+      - "Chapter 110: Academic Standards": levels/B1/110-academic-standards/index.md
+      - "Chapter 111: Plagiarism": levels/B1/111-plagiarism/index.md
+      - "Chapter 112: Academic Integrity": levels/B1/112-academic-integrity/index.md
+      - "Chapter 113: Ethics in Research": levels/B1/113-ethics-in-research/index.md
+      - "Chapter 114: Institutional Review Board": levels/B1/114-institutional-review-board/index.md
+      - "Chapter 115: Grants": levels/B1/115-grants/index.md
+      - "Chapter 116: Funding": levels/B1/116-funding/index.md
+      - "Chapter 117: Budget Management": levels/B1/117-budget-management/index.md
+      - "Chapter 118: Lab Management": levels/B1/118-lab-management/index.md
+      - "Chapter 119: Equipment": levels/B1/119-equipment/index.md
+      - "Chapter 120: Facilities": levels/B1/120-facilities/index.md
+    - "Part 4: Culture and Society":
+      - "Chapter 121: German History": levels/B1/121-german-history/index.md
+      - "Chapter 122: World War II": levels/B1/122-world-war-ii/index.md
+      - "Chapter 123: Cold War": levels/B1/123-cold-war/index.md
+      - "Chapter 124: Reunification": levels/B1/124-reunification/index.md
+      - "Chapter 125: Modern Germany": levels/B1/125-modern-germany/index.md
+      - "Chapter 126: Political System": levels/B1/126-political-system/index.md
+      - "Chapter 127: Elections": levels/B1/127-elections/index.md
+      - "Chapter 128: Political Parties": levels/B1/128-political-parties/index.md
+      - "Chapter 129: Government": levels/B1/129-government/index.md
+      - "Chapter 130: Parliament": levels/B1/130-parliament/index.md
+      - "Chapter 131: Chancellor": levels/B1/131-chancellor/index.md
+      - "Chapter 132: President": levels/B1/132-president/index.md
+      - "Chapter 133: Federal States": levels/B1/133-federal-states/index.md
+      - "Chapter 134: Local Government": levels/B1/134-local-government/index.md
+      - "Chapter 135: Public Services": levels/B1/135-public-services/index.md
+      - "Chapter 136: Social Security": levels/B1/136-social-security/index.md
+      - "Chapter 137: Healthcare System": levels/B1/137-healthcare-system/index.md
+      - "Chapter 138: Education System": levels/B1/138-education-system/index.md
+      - "Chapter 139: Transportation System": levels/B1/139-transportation-system/index.md
+      - "Chapter 140: Infrastructure": levels/B1/140-infrastructure/index.md
+      - "Chapter 141: Environmental Policy": levels/B1/141-environmental-policy/index.md
+      - "Chapter 142: Climate Change": levels/B1/142-climate-change/index.md
+      - "Chapter 143: Renewable Energy": levels/B1/143-renewable-energy/index.md
+      - "Chapter 144: Sustainability": levels/B1/144-sustainability/index.md
+      - "Chapter 145: Recycling": levels/B1/145-recycling/index.md
+      - "Chapter 146: Waste Management": levels/B1/146-waste-management/index.md
+      - "Chapter 147: Conservation": levels/B1/147-conservation/index.md
+      - "Chapter 148: Biodiversity": levels/B1/148-biodiversity/index.md
+      - "Chapter 149: Nature Protection": levels/B1/149-nature-protection/index.md
+      - "Chapter 150: National Parks": levels/B1/150-national-parks/index.md
+      - "Chapter 151: Cultural Heritage": levels/B1/151-cultural-heritage/index.md
+      - "Chapter 152: Museums": levels/B1/152-museums/index.md
+      - "Chapter 153: Art": levels/B1/153-art/index.md
+      - "Chapter 154: Literature": levels/B1/154-literature/index.md
+      - "Chapter 155: Music": levels/B1/155-music/index.md
+      - "Chapter 156: Theater": levels/B1/156-theater/index.md
+      - "Chapter 157: Cinema": levels/B1/157-cinema/index.md
+      - "Chapter 158: Television": levels/B1/158-television/index.md
+      - "Chapter 159: Media": levels/B1/159-media/index.md
+      - "Chapter 160: Journalism": levels/B1/160-journalism/index.md
+    - "Part 5: Advanced Topics":
+      - "Chapter 161: Immigration": levels/B1/161-immigration/index.md
+      - "Chapter 162: Integration": levels/B1/162-integration/index.md
+      - "Chapter 163: Multiculturalism": levels/B1/163-multiculturalism/index.md
+      - "Chapter 164: Diversity": levels/B1/164-diversity/index.md
+      - "Chapter 165: Inclusion": levels/B1/165-inclusion/index.md
+      - "Chapter 166: Discrimination": levels/B1/166-discrimination/index.md
+      - "Chapter 167: Racism": levels/B1/167-racism/index.md
+      - "Chapter 168: Xenophobia": levels/B1/168-xenophobia/index.md
+      - "Chapter 169: Tolerance": levels/B1/169-tolerance/index.md
+      - "Chapter 170: Acceptance": levels/B1/170-acceptance/index.md
+      - "Chapter 171: Human Rights": levels/B1/171-human-rights/index.md
+      - "Chapter 172: Civil Rights": levels/B1/172-civil-rights/index.md
+      - "Chapter 173: Freedom of Speech": levels/B1/173-freedom-of-speech/index.md
+      - "Chapter 174: Privacy": levels/B1/174-privacy/index.md
+      - "Chapter 175: Data Protection": levels/B1/175-data-protection/index.md
+      - "Chapter 176: Cybersecurity": levels/B1/176-cybersecurity/index.md
+      - "Chapter 177: Digital Rights": levels/B1/177-digital-rights/index.md
+      - "Chapter 178: Technology Ethics": levels/B1/178-technology-ethics/index.md
+      - "Chapter 179: Artificial Intelligence": levels/B1/179-artificial-intelligence/index.md
+      - "Chapter 180: Automation": levels/B1/180-automation/index.md
+      - "Chapter 181: Future of Work": levels/B1/181-future-of-work/index.md
+      - "Chapter 182: Globalization": levels/B1/182-globalization/index.md
+      - "Chapter 183: International Relations": levels/B1/183-international-relations/index.md
+      - "Chapter 184: European Union": levels/B1/184-european-union/index.md
+      - "Chapter 185: Brexit": levels/B1/185-brexit/index.md
+      - "Chapter 186: Trade Agreements": levels/B1/186-trade-agreements/index.md
+      - "Chapter 187: Economic Policy": levels/B1/187-economic-policy/index.md
+      - "Chapter 188: Monetary Policy": levels/B1/188-monetary-policy/index.md
+      - "Chapter 189: Fiscal Policy": levels/B1/189-fiscal-policy/index.md
+      - "Chapter 190: Public Debt": levels/B1/190-public-debt/index.md
+      - "Chapter 191: Welfare State": levels/B1/191-welfare-state/index.md
+      - "Chapter 192: Social Programs": levels/B1/192-social-programs/index.md
+      - "Chapter 193: Poverty": levels/B1/193-poverty/index.md
+      - "Chapter 194: Inequality": levels/B1/194-inequality/index.md
+      - "Chapter 195: Social Justice": levels/B1/195-social-justice/index.md
+      - "Chapter 196: Activism": levels/B1/196-activism/index.md
+      - "Chapter 197: Protests": levels/B1/197-protests/index.md
+      - "Chapter 198: Democracy": levels/B1/198-democracy/index.md
+      - "Chapter 199: Civic Engagement": levels/B1/199-civic-engagement/index.md
+      - "Chapter 200: Citizenship Responsibilities": levels/B1/200-citizenship-responsibilities/index.md
+  - B2 - Upper Intermediate:
+    - Start Here: levels/B2/index.md
+    - "Part 1: Professional Mastery":
+      - "Chapter 001: Executive Leadership": levels/B2/001-executive-leadership/index.md
+      - "Chapter 002: Strategic Planning": levels/B2/002-strategic-planning/index.md
+      - "Chapter 003: Organizational Change": levels/B2/003-organizational-change/index.md
+      - "Chapter 004: Innovation Management": levels/B2/004-innovation-management/index.md
+      - "Chapter 005: Disruptive Technologies": levels/B2/005-disruptive-technologies/index.md
+      - "Chapter 006: Digital Transformation": levels/B2/006-digital-transformation/index.md
+      - "Chapter 007: Agile Methodologies": levels/B2/007-agile-methodologies/index.md
+      - "Chapter 008: Scrum Framework": levels/B2/008-scrum-framework/index.md
+      - "Chapter 009: Project Management": levels/B2/009-project-management/index.md
+      - "Chapter 010: Risk Management": levels/B2/010-risk-management/index.md
+      - "Chapter 011: Crisis Management": levels/B2/011-crisis-management/index.md
+      - "Chapter 012: Business Continuity": levels/B2/012-business-continuity/index.md
+      - "Chapter 013: Disaster Recovery": levels/B2/013-disaster-recovery/index.md
+      - "Chapter 014: Stakeholder Management": levels/B2/014-stakeholder-management/index.md
+      - "Chapter 015: Board Meetings": levels/B2/015-board-meetings/index.md
+      - "Chapter 016: Shareholder Relations": levels/B2/016-shareholder-relations/index.md
+      - "Chapter 017: Corporate Governance": levels/B2/017-corporate-governance/index.md
+      - "Chapter 018: Compliance Programs": levels/B2/018-compliance-programs/index.md
+      - "Chapter 019: Internal Controls": levels/B2/019-internal-controls/index.md
+      - "Chapter 020: Fraud Prevention": levels/B2/020-fraud-prevention/index.md
+      - "Chapter 021: Forensic Accounting": levels/B2/021-forensic-accounting/index.md
+      - "Chapter 022: Due Diligence": levels/B2/022-due-diligence/index.md
+      - "Chapter 023: Valuation": levels/B2/023-valuation/index.md
+      - "Chapter 024: Financial Modeling": levels/B2/024-financial-modeling/index.md
+      - "Chapter 025: Investment Banking": levels/B2/025-investment-banking/index.md
+      - "Chapter 026: Private Equity": levels/B2/026-private-equity/index.md
+      - "Chapter 027: Venture Capital": levels/B2/027-venture-capital/index.md
+      - "Chapter 028: Startups": levels/B2/028-startups/index.md
+      - "Chapter 029: Entrepreneurship": levels/B2/029-entrepreneurship/index.md
+      - "Chapter 030: Business Models": levels/B2/030-business-models/index.md
+      - "Chapter 031: Competitive Analysis": levels/B2/031-competitive-analysis/index.md
+      - "Chapter 032: Market Research": levels/B2/032-market-research/index.md
+      - "Chapter 033: Consumer Behavior": levels/B2/033-consumer-behavior/index.md
+      - "Chapter 034: Behavioral Economics": levels/B2/034-behavioral-economics/index.md
+      - "Chapter 035: Neuromarketing": levels/B2/035-neuromarketing/index.md
+      - "Chapter 036: Brand Psychology": levels/B2/036-brand-psychology/index.md
+      - "Chapter 037: Influencer Marketing": levels/B2/037-influencer-marketing/index.md
+      - "Chapter 038: Content Strategy": levels/B2/038-content-strategy/index.md
+      - "Chapter 039: SEO and SEM": levels/B2/039-seo-sem/index.md
+      - "Chapter 040: Analytics": levels/B2/040-analytics/index.md
+    - "Part 2: Academic Excellence":
+      - "Chapter 041: Research Methodology": levels/B2/041-research-methodology/index.md
+      - "Chapter 042: Quantitative Research": levels/B2/042-quantitative-research/index.md
+      - "Chapter 043: Qualitative Research": levels/B2/043-qualitative-research/index.md
+      - "Chapter 044: Mixed Methods": levels/B2/044-mixed-methods/index.md
+      - "Chapter 045: Statistical Analysis": levels/B2/045-statistical-analysis/index.md
+      - "Chapter 046: Data Science": levels/B2/046-data-science/index.md
+      - "Chapter 047: Machine Learning": levels/B2/047-machine-learning/index.md
+      - "Chapter 048: Deep Learning": levels/B2/048-deep-learning/index.md
+      - "Chapter 049: Neural Networks": levels/B2/049-neural-networks/index.md
+      - "Chapter 050: Natural Language Processing": levels/B2/050-natural-language-processing/index.md
+      - "Chapter 051: Computer Vision": levels/B2/051-computer-vision/index.md
+      - "Chapter 052: Robotics": levels/B2/052-robotics/index.md
+      - "Chapter 053: Quantum Computing": levels/B2/053-quantum-computing/index.md
+      - "Chapter 054: Blockchain": levels/B2/054-blockchain/index.md
+      - "Chapter 055: Cryptocurrency": levels/B2/055-cryptocurrency/index.md
+      - "Chapter 056: Fintech": levels/B2/056-fintech/index.md
+      - "Chapter 057: Biotech": levels/B2/057-biotech/index.md
+      - "Chapter 058: Genetic Engineering": levels/B2/058-genetic-engineering/index.md
+      - "Chapter 059: CRISPR": levels/B2/059-crispr/index.md
+      - "Chapter 060: Personalized Medicine": levels/B2/060-personalized-medicine/index.md
+      - "Chapter 061: Neuroscience": levels/B2/061-neuroscience/index.md
+      - "Chapter 062: Cognitive Science": levels/B2/062-cognitive-science/index.md
+      - "Chapter 063: Psychology": levels/B2/063-psychology/index.md
+      - "Chapter 064: Sociology": levels/B2/064-sociology/index.md
+      - "Chapter 065: Anthropology": levels/B2/065-anthropology/index.md
+      - "Chapter 066: Philosophy": levels/B2/066-philosophy/index.md
+      - "Chapter 067: Ethics": levels/B2/067-ethics/index.md
+      - "Chapter 068: Moral Philosophy": levels/B2/068-moral-philosophy/index.md
+      - "Chapter 069: Political Philosophy": levels/B2/069-political-philosophy/index.md
+      - "Chapter 070: Epistemology": levels/B2/070-epistemology/index.md
+      - "Chapter 071: Metaphysics": levels/B2/071-metaphysics/index.md
+      - "Chapter 072: Logic": levels/B2/072-logic/index.md
+      - "Chapter 073: Critical Thinking": levels/B2/073-critical-thinking/index.md
+      - "Chapter 074: Argumentation": levels/B2/074-argumentation/index.md
+      - "Chapter 075: Rhetoric": levels/B2/075-rhetoric/index.md
+      - "Chapter 076: Discourse Analysis": levels/B2/076-discourse-analysis/index.md
+      - "Chapter 077: Linguistics": levels/B2/077-linguistics/index.md
+      - "Chapter 078: Phonetics": levels/B2/078-phonetics/index.md
+      - "Chapter 079: Syntax": levels/B2/079-syntax/index.md
+      - "Chapter 080: Semantics": levels/B2/080-semantics/index.md
+    - "Part 3: Global Issues":
+      - "Chapter 081: Climate Crisis": levels/B2/081-climate-crisis/index.md
+      - "Chapter 082: Global Warming": levels/B2/082-global-warming/index.md
+      - "Chapter 083: Carbon Emissions": levels/B2/083-carbon-emissions/index.md
+      - "Chapter 084: Paris Agreement": levels/B2/084-paris-agreement/index.md
+      - "Chapter 085: Environmental Justice": levels/B2/085-environmental-justice/index.md
+      - "Chapter 086: Ecological Collapse": levels/B2/086-ecological-collapse/index.md
+      - "Chapter 087: Mass Extinction": levels/B2/087-mass-extinction/index.md
+      - "Chapter 088: Deforestation": levels/B2/088-deforestation/index.md
+      - "Chapter 089: Ocean Acidification": levels/B2/089-ocean-acidification/index.md
+      - "Chapter 090: Plastic Pollution": levels/B2/090-plastic-pollution/index.md
+      - "Chapter 091: Air Pollution": levels/B2/091-air-pollution/index.md
+      - "Chapter 092: Water Scarcity": levels/B2/092-water-scarcity/index.md
+      - "Chapter 093: Food Security": levels/B2/093-food-security/index.md
+      - "Chapter 094: Sustainable Agriculture": levels/B2/094-sustainable-agriculture/index.md
+      - "Chapter 095: Organic Farming": levels/B2/095-organic-farming/index.md
+      - "Chapter 096: Permaculture": levels/B2/096-permaculture/index.md
+      - "Chapter 097: Urban Planning": levels/B2/097-urban-planning/index.md
+      - "Chapter 098: Smart Cities": levels/B2/098-smart-cities/index.md
+      - "Chapter 099: Public Transportation": levels/B2/099-public-transportation/index.md
+      - "Chapter 100: Electric Vehicles": levels/B2/100-electric-vehicles/index.md
+      - "Chapter 101: Autonomous Vehicles": levels/B2/101-autonomous-vehicles/index.md
+      - "Chapter 102: Space Exploration": levels/B2/102-space-exploration/index.md
+      - "Chapter 103: Mars Colonization": levels/B2/103-mars-colonization/index.md
+      - "Chapter 104: Asteroid Mining": levels/B2/104-asteroid-mining/index.md
+      - "Chapter 105: Satellite Technology": levels/B2/105-satellite-technology/index.md
+      - "Chapter 106: GPS Systems": levels/B2/106-gps-systems/index.md
+      - "Chapter 107: Telecommunications": levels/B2/107-telecommunications/index.md
+      - "Chapter 108: 5G Networks": levels/B2/108-5g-networks/index.md
+      - "Chapter 109: Internet of Things": levels/B2/109-internet-of-things/index.md
+      - "Chapter 110: Cloud Computing": levels/B2/110-cloud-computing/index.md
+      - "Chapter 111: Edge Computing": levels/B2/111-edge-computing/index.md
+      - "Chapter 112: Distributed Systems": levels/B2/112-distributed-systems/index.md
+      - "Chapter 113: Microservices": levels/B2/113-microservices/index.md
+      - "Chapter 114: DevOps": levels/B2/114-devops/index.md
+      - "Chapter 115: Continuous Integration": levels/B2/115-continuous-integration/index.md
+      - "Chapter 116: Software Architecture": levels/B2/116-software-architecture/index.md
+      - "Chapter 117: System Design": levels/B2/117-system-design/index.md
+      - "Chapter 118: Scalability": levels/B2/118-scalability/index.md
+      - "Chapter 119: Performance Optimization": levels/B2/119-performance-optimization/index.md
+      - "Chapter 120: Security Architecture": levels/B2/120-security-architecture/index.md
+    - "Part 4: Philosophical Debates":
+      - "Chapter 121: Existentialism": levels/B2/121-existentialism/index.md
+      - "Chapter 122: Nihilism": levels/B2/122-nihilism/index.md
+      - "Chapter 123: Absurdism": levels/B2/123-absurdism/index.md
+      - "Chapter 124: Stoicism": levels/B2/124-stoicism/index.md
+      - "Chapter 125: Utilitarianism": levels/B2/125-utilitarianism/index.md
+      - "Chapter 126: Deontology": levels/B2/126-deontology/index.md
+      - "Chapter 127: Virtue Ethics": levels/B2/127-virtue-ethics/index.md
+      - "Chapter 128: Consequentialism": levels/B2/128-consequentialism/index.md
+      - "Chapter 129: Moral Relativism": levels/B2/129-moral-relativism/index.md
+      - "Chapter 130: Moral Absolutism": levels/B2/130-moral-absolutism/index.md
+      - "Chapter 131: Free Will": levels/B2/131-free-will/index.md
+      - "Chapter 132: Determinism": levels/B2/132-determinism/index.md
+      - "Chapter 133: Compatibilism": levels/B2/133-compatibilism/index.md
+      - "Chapter 134: Consciousness": levels/B2/134-consciousness/index.md
+      - "Chapter 135: Mind-Body Problem": levels/B2/135-mind-body-problem/index.md
+      - "Chapter 136: Dualism": levels/B2/136-dualism/index.md
+      - "Chapter 137: Materialism": levels/B2/137-materialism/index.md
+      - "Chapter 138: Idealism": levels/B2/138-idealism/index.md
+      - "Chapter 139: Phenomenology": levels/B2/139-phenomenology/index.md
+      - "Chapter 140: Hermeneutics": levels/B2/140-hermeneutics/index.md
+      - "Chapter 141: Structuralism": levels/B2/141-structuralism/index.md
+      - "Chapter 142: Post-Structuralism": levels/B2/142-post-structuralism/index.md
+      - "Chapter 143: Deconstruction": levels/B2/143-deconstruction/index.md
+      - "Chapter 144: Critical Theory": levels/B2/144-critical-theory/index.md
+      - "Chapter 145: Frankfurt School": levels/B2/145-frankfurt-school/index.md
+      - "Chapter 146: Marxism": levels/B2/146-marxism/index.md
+      - "Chapter 147: Capitalism": levels/B2/147-capitalism/index.md
+      - "Chapter 148: Socialism": levels/B2/148-socialism/index.md
+      - "Chapter 149: Anarchism": levels/B2/149-anarchism/index.md
+      - "Chapter 150: Libertarianism": levels/B2/150-libertarianism/index.md
+      - "Chapter 151: Conservatism": levels/B2/151-conservatism/index.md
+      - "Chapter 152: Liberalism": levels/B2/152-liberalism/index.md
+      - "Chapter 153: Progressivism": levels/B2/153-progressivism/index.md
+      - "Chapter 154: Populism": levels/B2/154-populism/index.md
+      - "Chapter 155: Nationalism": levels/B2/155-nationalism/index.md
+      - "Chapter 156: Cosmopolitanism": levels/B2/156-cosmopolitanism/index.md
+      - "Chapter 157: Feminism": levels/B2/157-feminism/index.md
+      - "Chapter 158: Gender Studies": levels/B2/158-gender-studies/index.md
+      - "Chapter 159: Queer Theory": levels/B2/159-queer-theory/index.md
+      - "Chapter 160: Postcolonialism": levels/B2/160-postcolonialism/index.md
+    - "Part 5: Contemporary Challenges":
+      - "Chapter 161: Misinformation": levels/B2/161-misinformation/index.md
+      - "Chapter 162: Fake News": levels/B2/162-fake-news/index.md
+      - "Chapter 163: Media Literacy": levels/B2/163-media-literacy/index.md
+      - "Chapter 164: Propaganda": levels/B2/164-propaganda/index.md
+      - "Chapter 165: Censorship": levels/B2/165-censorship/index.md
+      - "Chapter 166: Freedom of Press": levels/B2/166-freedom-of-press/index.md
+      - "Chapter 167: Whistleblower Protection": levels/B2/167-whistleblower-protection/index.md
+      - "Chapter 168: Investigative Journalism": levels/B2/168-investigative-journalism/index.md
+      - "Chapter 169: Documentary Filmmaking": levels/B2/169-documentary-filmmaking/index.md
+      - "Chapter 170: Photojournalism": levels/B2/170-photojournalism/index.md
+      - "Chapter 171: War Reporting": levels/B2/171-war-reporting/index.md
+      - "Chapter 172: Conflict Zones": levels/B2/172-conflict-zones/index.md
+      - "Chapter 173: Humanitarian Crises": levels/B2/173-humanitarian-crises/index.md
+      - "Chapter 174: Refugee Crisis": levels/B2/174-refugee-crisis/index.md
+      - "Chapter 175: Asylum Seekers": levels/B2/175-asylum-seekers/index.md
+      - "Chapter 176: Border Control": levels/B2/176-border-control/index.md
+      - "Chapter 177: National Security": levels/B2/177-national-security/index.md
+      - "Chapter 178: Terrorism": levels/B2/178-terrorism/index.md
+      - "Chapter 179: Counterterrorism": levels/B2/179-counterterrorism/index.md
+      - "Chapter 180: Intelligence Agencies": levels/B2/180-intelligence-agencies/index.md
+      - "Chapter 181: Surveillance": levels/B2/181-surveillance/index.md
+      - "Chapter 182: Mass Surveillance": levels/B2/182-mass-surveillance/index.md
+      - "Chapter 183: Privacy Rights": levels/B2/183-privacy-rights/index.md
+      - "Chapter 184: Encryption": levels/B2/184-encryption/index.md
+      - "Chapter 185: Cybercrime": levels/B2/185-cybercrime/index.md
+      - "Chapter 186: Hacking": levels/B2/186-hacking/index.md
+      - "Chapter 187: Ransomware": levels/B2/187-ransomware/index.md
+      - "Chapter 188: Identity Theft": levels/B2/188-identity-theft/index.md
+      - "Chapter 189: Financial Fraud": levels/B2/189-financial-fraud/index.md
+      - "Chapter 190: Money Laundering": levels/B2/190-money-laundering/index.md
+      - "Chapter 191: Tax Evasion": levels/B2/191-tax-evasion/index.md
+      - "Chapter 192: Corruption": levels/B2/192-corruption/index.md
+      - "Chapter 193: Bribery": levels/B2/193-bribery/index.md
+      - "Chapter 194: Organized Crime": levels/B2/194-organized-crime/index.md
+      - "Chapter 195: Drug Trafficking": levels/B2/195-drug-trafficking/index.md
+      - "Chapter 196: Human Trafficking": levels/B2/196-human-trafficking/index.md
+      - "Chapter 197: Modern Slavery": levels/B2/197-modern-slavery/index.md
+      - "Chapter 198: Labor Exploitation": levels/B2/198-labor-exploitation/index.md
+      - "Chapter 199: Corporate Responsibility": levels/B2/199-corporate-responsibility/index.md
+      - "Chapter 200: Ethical Business Practices": levels/B2/200-ethical-business-practices/index.md
+
+# Copyright Text
+copyright: Copyright © 2025. All rights reserved.
+
+
