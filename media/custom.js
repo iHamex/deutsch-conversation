@@ -1,9 +1,3 @@
-/*
-*
-* Check24: Doctrine Documentation - Developer Guide
-*
-*/
-
 function getCurrentLang() {
     const path = window.location.pathname;
     const lang = path.split('/')[1];
@@ -15,7 +9,7 @@ function updateLogoLinkByLocale() {
     const logoLink = document.querySelector('.md-logo');
     
     if (logoLink) {
-        logoLink.href = currentLang === 'en' ? '/' : '/de/';
+        logoLink.href = currentLang === 'en' ? '/deutsch-conversation/' : '/de/';
     }
 }
 
