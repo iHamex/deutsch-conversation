@@ -1,28 +1,11 @@
 (function () {
-  const MODE_KEY = 'deutsch-tts-mode';
   const DEVOICE_KEY = 'deutsch-tts-devoice';
   const ENVOICE_KEY = 'deutsch-tts-envoice';
 
   let voicesList = [];
   let playbackToken = 0;
-  let deSelectRef = null;
-  let enSelectRef = null;
   let primed = false;
   let priming = null;
-
-  function getMode() {
-    try {
-      return localStorage.getItem(MODE_KEY) || 'de-en';
-    } catch (e) {
-      return 'de-en';
-    }
-  }
-
-  function setMode(mode) {
-    try {
-      localStorage.setItem(MODE_KEY, mode);
-    } catch (e) {}
-  }
 
   function getVoicePref(lang) {
     try {
@@ -32,16 +15,8 @@
     }
   }
 
-  function setVoicePref(lang, uri) {
-    try {
-      localStorage.setItem(lang === 'de' ? DEVOICE_KEY : ENVOICE_KEY, uri);
-    } catch (e) {}
-  }
-
   function pickVoices() {
     voicesList = window.speechSynthesis.getVoices();
-    if (deSelectRef) populateVoiceSelect(deSelectRef, 'de');
-    if (enSelectRef) populateVoiceSelect(enSelectRef, 'en');
   }
 
   function waitForVoices() {
@@ -136,7 +111,7 @@
     const myToken = ++playbackToken;
     await speak(deText, 'de');
     if (myToken !== playbackToken) return;
-    if (getMode() === 'de-en' && enText) {
+    if (enText) {
       await sleep(600);
       if (myToken !== playbackToken) return;
       await speak(enText, 'en');
@@ -154,71 +129,6 @@
       playPair(deText, enText);
     });
     return btn;
-  }
-
-  function populateVoiceSelect(select, lang) {
-    select.innerHTML = '';
-    const auto = document.createElement('option');
-    auto.value = '';
-    auto.textContent = 'Auto';
-    select.appendChild(auto);
-    const list = voicesList.filter((v) =>
-      v.lang.toLowerCase().startsWith(lang)
-    );
-    const pref = getVoicePref(lang);
-    list.forEach((v) => {
-      const opt = document.createElement('option');
-      opt.value = v.voiceURI;
-      opt.textContent = v.name;
-      if (v.voiceURI === pref) opt.selected = true;
-    });
-  }
-
-  function buildModeBar() {
-    const bar = document.createElement('div');
-    bar.className = 'md-tts-bar';
-
-    const modeLabel = document.createElement('span');
-    modeLabel.textContent = 'Audio: ';
-    const select = document.createElement('select');
-    select.className = 'md-tts-select';
-    const optDeEn = document.createElement('option');
-    optDeEn.value = 'de-en';
-    optDeEn.textContent = 'German + English';
-    const optDe = document.createElement('option');
-    optDe.value = 'de';
-    optDe.textContent = 'German only';
-    select.appendChild(optDeEn);
-    select.appendChild(optDe);
-    select.value = getMode();
-    select.addEventListener('change', () => setMode(select.value));
-
-    const deLabel = document.createElement('span');
-    deLabel.textContent = 'DE voice: ';
-    const deSelect = document.createElement('select');
-    deSelect.className = 'md-tts-select';
-    const enLabel = document.createElement('span');
-    enLabel.textContent = 'EN voice: ';
-    const enSelect = document.createElement('select');
-    enSelect.className = 'md-tts-select';
-
-    deSelect.addEventListener('focus', () => populateVoiceSelect(deSelect, 'de'));
-    enSelect.addEventListener('focus', () => populateVoiceSelect(enSelect, 'en'));
-    deSelect.addEventListener('change', () => setVoicePref('de', deSelect.value));
-    enSelect.addEventListener('change', () => setVoicePref('en', enSelect.value));
-    deSelectRef = deSelect;
-    enSelectRef = enSelect;
-
-    populateVoiceSelect(deSelect, 'de');
-    populateVoiceSelect(enSelect, 'en');
-
-    bar.appendChild(modeLabel);
-    bar.appendChild(select);
-    bar.appendChild(deLabel);
-    bar.appendChild(deSelect);
-    bar.appendChild(enLabel);
-    bar.appendChild(enSelect);
-    return bar;
   }
 
   function extractPair(p) {
@@ -260,10 +170,6 @@
   function init() {
     if (!('speechSynthesis' in window)) return;
     document.addEventListener('DOMContentLoaded', () => {
-      const content = document.querySelector('article.md-content__inner');
-      if (content && !content.querySelector('.md-tts-bar')) {
-        content.insertBefore(buildModeBar(), content.firstChild);
-      }
       processDialogue();
     });
   }
