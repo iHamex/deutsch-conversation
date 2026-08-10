@@ -57,6 +57,7 @@ extra_css:
 # JS Settings
 extra_javascript:
   - media/custom.js
+  - media/tts.js
 
 
 # Extra Settings
