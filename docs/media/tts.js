@@ -103,22 +103,13 @@
     });
   }
 
-  function sleep(ms) {
-    return new Promise((r) => setTimeout(r, ms));
-  }
-
-  async function playPair(deText, enText) {
+  async function playPair(deText) {
     const myToken = ++playbackToken;
     await speak(deText, 'de');
     if (myToken !== playbackToken) return;
-    if (enText) {
-      await sleep(600);
-      if (myToken !== playbackToken) return;
-      await speak(enText, 'en');
-    }
   }
 
-  function makeButton(deText, enText) {
+  function makeButton(deText) {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'md-tts-btn';
@@ -126,7 +117,7 @@
     btn.setAttribute('aria-label', 'Play audio');
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      playPair(deText, enText);
+      playPair(deText);
     });
     return btn;
   }
@@ -163,7 +154,7 @@
       if (p.querySelector('.md-tts-btn')) return;
       const pair = extractPair(p);
       if (!pair) return;
-      p.appendChild(makeButton(pair.de, pair.en));
+      p.appendChild(makeButton(pair.de));
     });
   }
 
