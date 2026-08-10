@@ -398,3 +398,47 @@ nav > ul > li > nav > ul > li > nav > ul > li > nav > ul > li > a {
   .md-sidebar--secondary:not([hidden]) {
     display: none;
   }
+
+.md-tts-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0 1rem;
+    border: 1px solid var(--mono-tint2);
+    border-radius: 6px;
+    background: var(--mono-shade2);
+    font-size: 0.75rem;
+}
+
+.md-tts-select {
+    background: var(--mono-shade1);
+    color: var(--base-color);
+    border: 1px solid var(--mono-tint2);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+}
+
+.md-tts-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 0.6rem;
+    border: 1px solid var(--mono-tint3);
+    border-radius: 50%;
+    background: var(--mono-shade1);
+    color: #5e8bde;
+    font-size: 0.7rem;
+    line-height: 1;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.md-tts-btn:hover {
+    background: var(--mono-tint2);
+    color: #fff;
+}
