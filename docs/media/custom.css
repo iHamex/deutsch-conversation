@@ -406,12 +406,6 @@ nav > ul > li > nav > ul > li > nav > ul > li > nav > ul > li > a {
     display: flex;
     justify-content: center;
     padding: 0.4rem 0;
-    background: linear-gradient(
-        to bottom,
-        var(--mono-shade2) 0%,
-        var(--mono-shade2) 75%,
-        rgba(0, 0, 0, 0) 100%
-    );
     margin-bottom: 0.6rem;
 }
 
