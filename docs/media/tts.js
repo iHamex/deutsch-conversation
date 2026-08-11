@@ -248,11 +248,12 @@
   function init() {
     if (!('speechSynthesis' in window)) return;
     document.addEventListener('DOMContentLoaded', () => {
+      processDialogue();
+      if (!allLines.length) return;
       const content = document.querySelector('article.md-content__inner');
       if (content && !content.querySelector('.md-tts-playall-wrap')) {
         content.insertBefore(buildPlayAllBar(), content.firstChild);
       }
-      processDialogue();
       window.addEventListener('pagehide', () => {
         if (playAllActive) stopPlayAll();
       });
