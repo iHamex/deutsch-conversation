@@ -12,7 +12,6 @@ theme:
   language: en
   name: material
   logo: media/logo.png
-  favicon: media/favicon.png
   palette:
     - scheme: slate
       primary: 'blue grey'
